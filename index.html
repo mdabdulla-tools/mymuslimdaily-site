@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Muslim Daily — Prayer Times, Ramadan Calendar, Qibla, Quran & Duas</title>
+<meta name="description" content="Muslim Daily: accurate prayer times, Sehri & Iftar times, Ramadan calendar with downloads, Hijri calendar, Qibla direction, full Quran with audio recitation, Sahih hadith library, 99 Names of Allah, duas, tasbih counter and zakat & fitra calculator. Free, in Bangla, English and Arabic.">
+<link rel="canonical" href="https://mymuslimdaily.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Muslim Daily">
+<meta property="og:title" content="Muslim Daily — Prayer Times, Qibla, Quran, Hadith & Ramadan Calendar">
+<meta property="og:description" content="Prayer & Ramadan times, Qibla, full Quran with audio, Sahih hadith, 99 Names, duas, tasbih and zakat calculator — free in Bangla, English & Arabic.">
+<meta property="og:url" content="https://mymuslimdaily.vercel.app/">
+<meta property="og:image" content="https://mymuslimdaily.vercel.app/icon-512.png">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Muslim Daily","url":"https://mymuslimdaily.vercel.app/","applicationCategory":"LifestyleApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"inLanguage":["en","bn","ar"],"description":"Prayer times, Ramadan calendar, Qibla direction, Quran with audio recitation, hadith library, 99 Names of Allah, duas, tasbih and zakat calculator."}
+</script>
+<meta name="description" content="Muslim Daily: prayer times, Ramadan timetable with downloads, Hijri calendar, Qibla direction, 99 Names of Allah, daily verse and hadith, duas, tasbih, zakat & fitra calculators, and Quran learning. Free, in Bangla, English and Arabic.">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<meta name="theme-color" content="#065f46">
+<style>
+*{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#eef5f1;color:#122019}
+header{background:linear-gradient(135deg,#065f46,#0b7a5c 55%,#0e9f6e);color:#fff;padding:22px 16px 18px;text-align:center;position:relative;overflow:hidden}
+header:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 15% 20%,rgba(255,255,255,.14) 0 60px,transparent 61px),radial-gradient(circle at 85% 10%,rgba(255,255,255,.10) 0 90px,transparent 91px),radial-gradient(circle at 70% 90%,rgba(255,255,255,.08) 0 70px,transparent 71px)}
+header h1{margin:0;font-size:26px;position:relative} header p{margin:6px 0 10px;opacity:.94;font-size:14px;position:relative}
+#langSel{position:relative;width:auto;padding:7px 10px;border-radius:20px;border:0;font-size:14px;background:rgba(255,255,255,.92);color:#065f46;font-weight:600}
+.wrap{max-width:780px;margin:0 auto;padding:14px 14px 96px}
+.card{background:#fff;border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 2px 10px rgba(6,95,70,.08);border:1px solid #e2efe8}
+.card h2{margin:0 0 10px;font-size:18px;color:#065f46}
+select,input[type=number],input[type=text]{width:100%;padding:11px;border:1px solid #cfe0d7;border-radius:10px;font-size:15px;background:#fff;margin:4px 0 10px}
+button{background:#065f46;color:#fff;border:0;border-radius:10px;padding:11px 16px;font-size:15px;cursor:pointer}
+button.ghost{background:#e6f2ec;color:#065f46}
+.pt-row{display:flex;justify-content:space-between;padding:10px 6px;border-bottom:1px solid #eef3f0;font-size:16px}
+.pt-row:last-child{border-bottom:0}
+.pt-row.next{background:linear-gradient(90deg,#e6f7ee,#f2fbf6);border-radius:10px;font-weight:700;color:#065f46;padding-left:10px;padding-right:10px}
+.dates{text-align:center;background:linear-gradient(180deg,#ffffff,#f2faf6)}
+.dates .hijri{font-size:20px;font-weight:800;color:#065f46}
+.count{text-align:center;font-size:15px;color:#555;margin-top:8px}
+.count b{color:#065f46;font-size:20px}
+.arabic{font-size:22px;line-height:1.9;direction:rtl;text-align:right;font-family:'Traditional Arabic','Scheherazade New',serif}
+.trans{color:#333;font-style:italic;margin-top:6px}
+.mean{color:#555;margin-top:4px;font-size:14px}
+.name-item{padding:9px 4px;border-bottom:1px solid #eef3f0}
+.name-item b{color:#065f46}
+.dua-item{padding:12px 0;border-bottom:1px solid #eef3f0}
+.dua-item:last-child{border-bottom:0}
+.dua-item h3{margin:0 0 6px;font-size:16px;color:#065f46}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid #dfe9e3;display:flex;overflow-x:auto;z-index:9;scrollbar-width:none}
+nav.tabs::-webkit-scrollbar{display:none}
+nav.tabs button{flex:1 0 auto;background:none;color:#567;border-radius:0;font-size:12.5px;padding:10px 10px;white-space:nowrap}
+nav.tabs button.on{color:#065f46;font-weight:700;box-shadow:inset 0 2px 0 #065f46}
+.tab{display:none} .tab.on{display:block}
+#tasbihBtn{width:210px;height:210px;border-radius:50%;font-size:22px;display:block;margin:14px auto;background:radial-gradient(circle at 35% 30%, #0d8a64, #065f46)}
+.tcount{text-align:center;font-size:44px;font-weight:800;color:#065f46}
+.small{font-size:13px;color:#777}
+.center{text-align:center}
+.compass{width:220px;height:220px;margin:10px auto;border:3px solid #065f46;border-radius:50%;position:relative;background:#f7fbf9}
+.needle{position:absolute;left:50%;top:50%;width:0;height:0;transform-origin:0 0}
+.needle:before{content:'';position:absolute;left:-9px;top:-96px;border:9px solid transparent;border-bottom:88px solid #c0392b}
+.qdeg{text-align:center;font-size:20px;font-weight:700;color:#065f46}
+.hgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.hcell{background:#f2f8f5;border-radius:10px;padding:7px 4px;text-align:center;min-height:52px}
+.hcell b{display:block;font-size:17px;color:#065f46}
+.hcell span{font-size:12px;color:#888}
+.hcell.today{background:#065f46} .hcell.today b{color:#fff} .hcell.today span{color:#cfe8dc}
+.hcell.empty{background:transparent}
+table.ram{width:100%;border-collapse:collapse;font-size:14.5px}
+table.ram th{background:#065f46;color:#fff;padding:8px 6px;text-align:left}
+table.ram td{padding:7px 6px;border-bottom:1px solid #eef3f0}
+table.ram tr:nth-child(even) td{background:#f7fbf9}
+.alpha-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(74px,1fr));gap:8px}
+.alpha{background:#f2f8f5;border-radius:12px;padding:10px 4px;text-align:center}
+.alpha-l{font-size:30px;font-family:'Traditional Arabic',serif;color:#065f46}
+.alpha-n{font-weight:700;font-size:13px}
+ol.steps li{margin:7px 0;line-height:1.55}
+.ayah{padding:13px 0;border-bottom:1px solid #eef3f0}
+.ayah.playing{background:#e9f9f0;border-radius:10px;padding-left:8px;padding-right:8px}
+.ayah-num{color:#065f46;font-size:17px}
+.ayah-play{margin-top:7px;padding:7px 12px;font-size:13.5px}
+.chk{display:flex;align-items:center;gap:8px;padding:6px 0;font-size:15px}
+.chk input{width:19px;height:19px;accent-color:#065f46}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btnrow button{flex:1;min-width:140px}
+footer{text-align:center;color:#888;font-size:12.5px;padding:18px 10px 8px;line-height:1.7}
+footer a{color:#065f46}
+@media print{
+  body{background:#fff} header,nav.tabs,.card:not(#ramadanCard),footer,.btnrow{display:none!important}
+  .wrap{padding:0} #ramadanCard{box-shadow:none;border:0}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>🕌 Muslim Daily</h1>
+  <p data-i18n="tagline">Prayer times · Qibla · Duas · Tasbih · 99 Names</p>
+  <select id="langSel">
+    <option value="en">English</option>
+    <option value="bn">বাংলা</option>
+    <option value="ar">العربية</option>
+  </select>
+</header>
+<div class="wrap">
+
+  <!-- PRAYER TAB -->
+  <section class="tab on" id="tab-prayer">
+    <div class="card dates">
+      <div class="hijri" id="hijriDate">…</div>
+      <div id="gregDate" class="small"></div>
+      <div class="count" id="nextPrayer"></div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="location">📍 Location &amp; settings</h2>
+      <select id="citySel"></select>
+      <button class="ghost" id="geoBtn" style="width:100%" data-i18n="gps">📍 Use my location (GPS)</button>
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <div style="flex:1"><label class="small" data-i18n="method">Calculation method</label><select id="methodSel"></select></div>
+        <div style="flex:1"><label class="small" data-i18n="asr">Asr school</label>
+          <select id="asrSel"><option value="2" data-i18n="asr_hanafi">Hanafi</option><option value="1" data-i18n="asr_shafi">Shafi'i / Maliki / Hanbali</option></select></div>
+      </div>
+      <div class="small" id="locLabel"></div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="today">🕋 Today's prayer times</h2>
+      <div id="ptList"></div>
+      <p class="small" data-i18n="fasting_note"></p>
+    </div>
+    <div class="card">
+      <h2 data-i18n="reminders">🔔 Prayer reminders</h2>
+      <div id="remindList">
+        <label class="chk"><input type="checkbox" class="remindChk" data-prayer="Fajr"> Fajr</label>
+        <label class="chk"><input type="checkbox" class="remindChk" data-prayer="Dhuhr"> Dhuhr</label>
+        <label class="chk"><input type="checkbox" class="remindChk" data-prayer="Asr"> Asr</label>
+        <label class="chk"><input type="checkbox" class="remindChk" data-prayer="Maghrib"> Maghrib</label>
+        <label class="chk"><input type="checkbox" class="remindChk" data-prayer="Isha"> Isha</label>
+      </div>
+      <button id="notifBtn" data-i18n="enable_notif">Enable notifications</button>
+      <span class="small" id="notifState"></span>
+      <p class="small" data-i18n="reminders_note"></p>
+    </div>
+    <div class="card">
+      <h2 data-i18n="verse">📖 Verse of the day</h2>
+      <p id="verseText" style="font-size:16.5px;line-height:1.6"></p>
+      <p class="small" id="verseRef"></p>
+    </div>
+    <div class="card">
+      <h2 data-i18n="hadith">🕊️ Hadith of the day</h2>
+      <p id="hadithText" style="font-size:16.5px;line-height:1.6"></p>
+      <p class="small" id="hadithRef"></p>
+    </div>
+  </section>
+
+  <!-- CALENDAR TAB -->
+  <section class="tab" id="tab-calendar">
+    <div class="card">
+      <h2 data-i18n="hijri_cal">📅 Hijri calendar</h2>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <button class="ghost" id="calPrev">‹ Prev</button>
+        <b id="hijriTitle" style="color:#065f46"></b>
+        <button class="ghost" id="calNext">Next ›</button>
+      </div>
+      <div class="hgrid" id="hijriGrid"></div>
+      <p class="small">Big number = Hijri day · small number = Gregorian day of month.</p>
+    </div>
+    <div class="card" id="ramadanCard">
+      <h2><span data-i18n="ramadan">🌙 Ramadan timetable</span> — <span id="ramadanLoc"></span></h2>
+      <table class="ram">
+        <thead><tr><th data-i18n="day">Day</th><th data-i18n="date">Date</th><th data-i18n="sehri">Sehri ends (Fajr)</th><th data-i18n="iftar">Iftar (Maghrib)</th></tr></thead>
+        <tbody id="ramadanBody"></tbody>
+      </table>
+      <div class="btnrow">
+        <button id="dlCsv" data-i18n="download_csv">⬇️ Download CSV</button>
+        <button id="dlIcs" data-i18n="download_ics">⬇️ Download ICS</button>
+        <button id="printRamadan" class="ghost" data-i18n="print">🖨️ Print / Save PDF</button>
+      </div>
+      <p class="small" data-i18n="ramadan_note"></p>
+    </div>
+  </section>
+
+  <!-- QIBLA TAB -->
+  <section class="tab" id="tab-qibla">
+    <div class="card center">
+      <h2 data-i18n="qibla_h">🧭 Qibla direction</h2>
+      <div class="compass"><div class="needle" id="needle"></div></div>
+      <div class="qdeg" id="qiblaDeg">—</div>
+      <p class="small">Direction from your selected location, clockwise from North. On phones with a compass sensor, the arrow adjusts as you turn.</p>
+    </div>
+  </section>
+
+  <!-- QURAN TAB -->
+  <section class="tab" id="tab-quran">
+    <div class="card">
+      <h2 data-i18n="quran_h">📖 Al-Quran — read &amp; listen</h2>
+      <select id="surahSel"></select>
+      <div class="small" id="quranState">Loading surah list…</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:8px 0">
+        <label class="chk" style="padding:0"><input type="checkbox" id="trChk" checked> Show translation</label>
+        <label class="chk" style="padding:0"><input type="checkbox" id="autoChk" checked> Auto-play next ayah</label>
+      </div>
+      <div class="btnrow" style="margin:6px 0 4px">
+        <button id="playAllBtn">▶ Play surah</button>
+        <button id="stopBtn" class="ghost">⏹ Stop</button>
+      </div>
+      <div id="ayahList"></div>
+      <p class="small">Arabic: Uthmani script · English: Saheeh International · বাংলা: Muhiuddin Khan · Audio: Mishary Alafasy. Loaded surahs are saved on your device for offline reading. Source: AlQuran Cloud.</p>
+    </div>
+  </section>
+
+  <!-- HADITH TAB -->
+  <section class="tab" id="tab-hadith">
+    <div class="card">
+      <h2 data-i18n="hadith_h">📚 Hadith library</h2>
+      <label class="small">Book</label><select id="bookSel"></select>
+      <label class="small">Section / chapter</label><select id="sectionSel"></select>
+      <div class="small" id="hadithState"></div>
+      <div id="hadithList"></div>
+      <p class="small">Text follows the app language (Arabic / English / Bengali). Loaded sections are saved on your device for offline reading. Source: hadith-api (open data).</p>
+    </div>
+  </section>
+
+  <!-- LEARN TAB -->
+  <section class="tab" id="tab-learn">
+    <div class="card">
+      <h2 data-i18n="alphabet">Arabic alphabet</h2>
+      <div class="alpha-grid" id="alphaGrid"></div>
+    </div>
+    <div class="card">
+      <h2 data-i18n="wudu">How to make wudu</h2>
+      <ol class="steps" id="wuduList"></ol>
+    </div>
+    <div class="card">
+      <h2 data-i18n="pray">How to pray (2 rak'ah)</h2>
+      <ol class="steps" id="prayList"></ol>
+    </div>
+    <div class="card">
+      <h2 data-i18n="surahs">Short surahs for prayer</h2>
+      <div id="surahList"></div>
+    </div>
+  </section>
+
+  <!-- NAMES TAB -->
+  <section class="tab" id="tab-names">
+    <div class="card">
+      <h2 data-i18n="names_h">✨ 99 Names of Allah</h2>
+      <input type="text" id="nameSearch" placeholder="Search a name or meaning…">
+      <div id="namesList"></div>
+    </div>
+  </section>
+
+  <!-- DUAS TAB -->
+  <section class="tab" id="tab-duas">
+    <div class="card">
+      <h2 data-i18n="duas_h">🤲 Daily duas</h2>
+      <div id="duasList"></div>
+    </div>
+  </section>
+
+  <!-- TASBIH TAB -->
+  <section class="tab" id="tab-tasbih">
+    <div class="card center">
+      <h2 data-i18n="tasbih_h">📿 Tasbih counter</h2>
+      <select id="dhikrSel" style="max-width:340px;margin:0 auto">
+        <option>SubhanAllah — Glory be to Allah</option>
+        <option>Alhamdulillah — All praise is due to Allah</option>
+        <option>Allahu Akbar — Allah is the Greatest</option>
+        <option>La ilaha illallah — There is no god but Allah</option>
+        <option>Astaghfirullah — I seek Allah's forgiveness</option>
+        <option>Allahumma salli 'ala Muhammad — Send blessings upon Muhammad ﷺ</option>
+      </select>
+      <div class="tcount" id="tCount">0</div>
+      <div class="small"><span data-i18n="target">Target</span>: <span id="tTargetLabel">33</span> · <span data-i18n="rounds">Rounds</span>: <span id="tRounds">0</span> · <span data-i18n="total">Total</span>: <span id="tTotal">0</span></div>
+      <button id="tasbihBtn" data-i18n="tap">Tap to count</button>
+      <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+        <button class="ghost" data-target="33">33</button>
+        <button class="ghost" data-target="99">99</button>
+        <button class="ghost" data-target="100">100</button>
+        <button class="ghost" id="tReset" data-i18n="reset">Reset</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAKAT TAB -->
+  <section class="tab" id="tab-zakat">
+    <div class="card">
+      <h2 data-i18n="zakat_h">💰 Zakat calculator</h2>
+      <p class="small">Enter what you own (in your own currency). Zakat is 2.5% of net zakatable wealth, payable if it reaches the nisab (value of 85g gold or 595g silver).</p>
+      <label class="small">Cash &amp; bank balance</label><input type="number" id="zCash" min="0" value="0">
+      <label class="small">Value of gold owned</label><input type="number" id="zGold" min="0" value="0">
+      <label class="small">Value of silver owned</label><input type="number" id="zSilver" min="0" value="0">
+      <label class="small">Business goods / trade assets</label><input type="number" id="zBiz" min="0" value="0">
+      <label class="small">Money owed TO you (likely to be repaid)</label><input type="number" id="zOwed" min="0" value="0">
+      <label class="small">Your debts (to subtract)</label><input type="number" id="zDebt" min="0" value="0">
+      <label class="small">Nisab threshold in your currency (value of 595g silver — the lower, safer nisab)</label><input type="number" id="zNisab" min="0" value="0">
+      <button id="zCalc" style="width:100%">Calculate zakat</button>
+      <div id="zResult" style="margin-top:12px;font-size:16px"></div>
+      <p class="small">This is a simple guide, not a fatwa. For complex wealth, please consult a scholar.</p>
+    </div>
+    <div class="card">
+      <h2 data-i18n="fitra_h">🌾 Fitra (Zakat al-Fitr) calculator</h2>
+      <p class="small">Classical Hanafi measures per person: wheat/flour 1.65 kg · barley, dates, raisins or cheese 3.3 kg. Or use your country's official per-person rate.</p>
+      <label class="small">Staple food</label>
+      <select id="fStaple">
+        <option value="1.65">Wheat / flour — 1.65 kg per person</option>
+        <option value="3.3">Barley — 3.3 kg per person</option>
+        <option value="3.3">Dates — 3.3 kg per person</option>
+        <option value="3.3">Raisins — 3.3 kg per person</option>
+        <option value="3.3">Cheese — 3.3 kg per person</option>
+      </select>
+      <label class="small">Price per kg (your currency)</label><input type="number" id="fPrice" min="0" value="0">
+      <label class="small">OR official fitra rate per person</label><input type="number" id="fFixed" min="0" value="0">
+      <label class="small">Number of people</label><input type="number" id="fPersons" min="1" value="1">
+      <button id="fCalc" style="width:100%">Calculate fitra</button>
+      <div id="fResult" style="margin-top:12px;font-size:16px"></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 Muslim Daily — All rights reserved.<br>
+    Developed by <a href="https://www.linkedin.com/in/mdabdullabd" target="_blank" rel="noopener">Md. Abdulla</a>
+  </footer>
+</div>
+
+<nav class="tabs">
+  <button data-tab="prayer" class="on" data-i18n="tab_prayer">🕌 Prayer</button>
+  <button data-tab="calendar" data-i18n="tab_calendar">📅 Calendar</button>
+  <button data-tab="qibla" data-i18n="tab_qibla">🧭 Qibla</button>
+  <button data-tab="quran" data-i18n="tab_quran">📖 Quran</button>
+  <button data-tab="hadith" data-i18n="tab_hadith">📚 Hadith</button>
+  <button data-tab="learn" data-i18n="tab_learn">📖 Learn</button>
+  <button data-tab="names" data-i18n="tab_names">✨ Names</button>
+  <button data-tab="duas" data-i18n="tab_duas">🤲 Duas</button>
+  <button data-tab="tasbih" data-i18n="tab_tasbih">📿 Tasbih</button>
+  <button data-tab="zakat" data-i18n="tab_zakat">💰 Zakat</button>
+</nav>
+
+<script src="data.js"></script>
+<script src="praytimes.js"></script>
+<script src="i18n.js"></script>
+<script src="learn.js"></script>
+<script src="app.js"></script>
+<script src="quran.js"></script>
+<script src="hadith.js"></script>
+<script src="features.js"></script>
+</body>
+</html>
